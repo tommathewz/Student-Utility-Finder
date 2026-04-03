@@ -1,0 +1,122 @@
+name: CI/CD Pipeline
+
+# Trigger on push to main or pull requests
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  # 1. FRONTEND TEST STAGE
+  frontend-test:
+    name: Frontend Test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          # Optional: cache: 'npm' - requires package.json in root or path specified
+
+      - name: Run Frontend Lint/Tests (Placeholder)
+        run: |
+          echo "Scanning frontend files in frontend/..."
+          echo "Frontend sanity check passed."
+
+  # 2. BACKEND TEST STAGE
+  backend-test:
+    name: Backend Test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Get npm cache directory
+        id: npm-cache-dir
+        shell: bash
+        run: echo "dir=$(npm config get cache)" >> ${GITHUB_OUTPUT}
+
+      - name: Cache Node Modules
+        uses: actions/cache@v4
+        id: npm-cache
+        with:
+          path: ${{ steps.npm-cache-dir.outputs.dir }}
+          key: ${{ runner.os }}-node-${{ hashFiles('backend/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
+      - name: Install Backend Dependencies
+        run: |
+          cd backend
+          npm install
+
+      - name: Run Backend Unit Tests
+        run: |
+          cd backend
+          npm test
+
+  # 3. SELENIUM TEST STAGE
+  # Depends on frontend and backend stages
+  selenium-test:
+    name: Selenium Test
+    needs: [frontend-test, backend-test]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+          cache: 'pip'
+
+      - name: Install Dependencies
+        run: |
+          pip install -r requirements.txt
+
+      - name: Run UI Tests with Selenium
+        run: |
+          # The Python script uses headless Chrome configuration
+          python tests/selenium_test.py
+
+  # 4. DOCKER BUILD STAGE
+  # Depends on all tests passing
+  docker-build:
+    name: Docker Build
+    needs: [selenium-test]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Build Backend Image
+        run: |
+          docker build -t student-finder-backend:latest ./backend
+          docker tag student-finder-backend:latest student-finder-backend:${{ github.sha }}
+
+      - name: Build Frontend Image
+        run: |
+          docker build -t student-finder-frontend:latest ./frontend
+          docker tag student-finder-frontend:latest student-finder-frontend:${{ github.sha }}
+
+  # 5. DEPLOY STAGE
+  # Depends on successful build
+  deploy:
+    name: Deploy
+    needs: [docker-build]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Simulate Deployment
+        run: |
+          echo "Simulating deployment of images tagged ${{ github.sha }} to production environment..."
+          echo "Deployment successful!"

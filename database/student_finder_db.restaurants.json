@@ -1,0 +1,197 @@
+[{
+  "_id": {
+    "$oid": "69ceafdb05ad45e6d0c229ea"
+  },
+  "name": "Empire Restaurant",
+  "location": "Hennur Road",
+  "price": 250,
+  "imageUrl": "https://source.unsplash.com/400x300/?restaurant,food",
+  "gmapLink": "https://maps.google.com/?q=Empire+Restaurant+Hennur",
+  "description": "Popular budget restaurant",
+  "rating": 4.3,
+  "lat": 13.025,
+  "lng": 77.64
+},
+{
+  "_id": {
+    "$oid": "69ceafdb05ad45e6d0c229eb"
+  },
+  "name": "Udupi Cafe",
+  "location": "Kothanur",
+  "price": 150,
+  "imageUrl": "https://source.unsplash.com/400x300/?south-indian-restaurant",
+  "gmapLink": "https://maps.google.com/?q=Udupi+Cafe+Kothanur",
+  "description": "Affordable South Indian food",
+  "rating": 4.2,
+  "lat": 13.017,
+  "lng": 77.6498
+},
+{
+  "_id": {
+    "$oid": "69cf3746d49ef76e230babc9"
+  },
+  "name": "Kanti Sweets & Snacks",
+  "location": "Kothanur Main Road",
+  "price": 100,
+  "imageUrl": "https://source.unsplash.com/400x300/?snacks",
+  "gmapLink": "https://maps.google.com/?q=Kanti+Sweets+Kothanur",
+  "lat": 13.0178,
+  "lng": 77.6495,
+  "rating": 4.2
+},
+{
+  "_id": {
+    "$oid": "69cf3746d49ef76e230babca"
+  },
+  "name": "Chai Point",
+  "location": "Near Kristu Jayanti College",
+  "price": 80,
+  "imageUrl": "https://source.unsplash.com/400x300/?tea",
+  "gmapLink": "https://maps.google.com/?q=Chai+Point+Kothanur",
+  "lat": 13.0163,
+  "lng": 77.6487,
+  "rating": 4.3
+},
+{
+  "_id": {
+    "$oid": "69cf3746d49ef76e230babcb"
+  },
+  "name": "Sri Udupi Food Hub",
+  "location": "K Narayanapura",
+  "price": 120,
+  "imageUrl": "https://source.unsplash.com/400x300/?idli,dosa",
+  "gmapLink": "https://maps.google.com/?q=Udupi+Restaurant+Kothanur",
+  "lat": 13.0174,
+  "lng": 77.65,
+  "rating": 4.1
+},
+{
+  "_id": {
+    "$oid": "69cf3746d49ef76e230babcc"
+  },
+  "name": "Burger King",
+  "location": "Hennur Road",
+  "price": 300,
+  "imageUrl": "https://source.unsplash.com/400x300/?burger",
+  "gmapLink": "https://maps.google.com/?q=Burger+King+Hennur",
+  "lat": 13.0225,
+  "lng": 77.646,
+  "rating": 4.4
+},
+{
+  "_id": {
+    "$oid": "69cf3746d49ef76e230babcd"
+  },
+  "name": "KFC",
+  "location": "Near Hennur Junction",
+  "price": 350,
+  "imageUrl": "https://source.unsplash.com/400x300/?fried-chicken",
+  "gmapLink": "https://maps.google.com/?q=KFC+Hennur",
+  "lat": 13.0232,
+  "lng": 77.6452,
+  "rating": 4.3
+},
+{
+  "_id": {
+    "$oid": "69cf3746d49ef76e230babce"
+  },
+  "name": "Domino's Pizza",
+  "location": "Hennur Road",
+  "price": 250,
+  "imageUrl": "https://source.unsplash.com/400x300/?pizza",
+  "gmapLink": "https://maps.google.com/?q=Dominos+Hennur",
+  "lat": 13.0228,
+  "lng": 77.6465,
+  "rating": 4.2
+},
+{
+  "_id": {
+    "$oid": "69cf3746d49ef76e230babcf"
+  },
+  "name": "Pizza Hut",
+  "location": "Kothanur",
+  "price": 300,
+  "imageUrl": "https://source.unsplash.com/400x300/?pizza-slice",
+  "gmapLink": "https://maps.google.com/?q=Pizza+Hut+Kothanur",
+  "lat": 13.0181,
+  "lng": 77.6492,
+  "rating": 4.1
+},
+{
+  "_id": {
+    "$oid": "69cf3746d49ef76e230babd0"
+  },
+  "name": "Punjabi Rasoi",
+  "location": "K Narayanapura",
+  "price": 200,
+  "imageUrl": "https://source.unsplash.com/400x300/?north-indian-food",
+  "gmapLink": "https://maps.google.com/?q=Punjabi+Restaurant+Kothanur",
+  "lat": 13.0176,
+  "lng": 77.6503,
+  "rating": 4.3
+},
+{
+  "_id": {
+    "$oid": "69cf3746d49ef76e230babd1"
+  },
+  "name": "Tandoori Flames",
+  "location": "Hennur",
+  "price": 280,
+  "imageUrl": "https://source.unsplash.com/400x300/?tandoori",
+  "gmapLink": "https://maps.google.com/?q=Tandoori+Restaurant+Hennur",
+  "lat": 13.0215,
+  "lng": 77.6468,
+  "rating": 4.4
+},
+{
+  "_id": {
+    "$oid": "69cf3746d49ef76e230babd2"
+  },
+  "name": "Rolls & Wraps",
+  "location": "Near College Gate",
+  "price": 120,
+  "imageUrl": "https://source.unsplash.com/400x300/?rolls",
+  "gmapLink": "https://maps.google.com/?q=Rolls+Shop+Kothanur",
+  "lat": 13.0161,
+  "lng": 77.6489,
+  "rating": 4.2
+},
+{
+  "_id": {
+    "$oid": "69cf3746d49ef76e230babd3"
+  },
+  "name": "Momo Street",
+  "location": "Kothanur",
+  "price": 100,
+  "imageUrl": "https://source.unsplash.com/400x300/?momos",
+  "gmapLink": "https://maps.google.com/?q=Momos+Kothanur",
+  "lat": 13.0172,
+  "lng": 77.6496,
+  "rating": 4.1
+},
+{
+  "_id": {
+    "$oid": "69cf3746d49ef76e230babd4"
+  },
+  "name": "Cream Stone Ice Cream",
+  "location": "Hennur Road",
+  "price": 180,
+  "imageUrl": "https://source.unsplash.com/400x300/?ice-cream",
+  "gmapLink": "https://maps.google.com/?q=Cream+Stone+Hennur",
+  "lat": 13.022,
+  "lng": 77.6462,
+  "rating": 4.5
+},
+{
+  "_id": {
+    "$oid": "69cf3746d49ef76e230babd5"
+  },
+  "name": "Cafe Coffee Day",
+  "location": "Kothanur",
+  "price": 200,
+  "imageUrl": "https://source.unsplash.com/400x300/?coffee-shop",
+  "gmapLink": "https://maps.google.com/?q=CCD+Kothanur",
+  "lat": 13.0184,
+  "lng": 77.649,
+  "rating": 4.2
+}]

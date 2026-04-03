@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Stay &amp; Food Finder | Listing Details</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎓</text></svg>">
+  <meta name="description" content="View listing details, contact info, pricing, and location map.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ── NAVBAR ──────────────────────────────────────────── -->
+  <header class="navbar details-navbar">
+    <div class="logo-wrapper">
+      <h1 onclick="window.location.href='index.html'">Student Utility Finder</h1>
+    </div>
+    <nav class="nav-links">
+      <a href="index.html">Explore</a>
+      <a href="admin.html" class="admin-btn btn-primary">+ Add Listing</a>
+      <a href="#" class="logout-btn" onclick="logout(); return false;" style="display:none;">Logout</a>
+    </nav>
+  </header>
+
+  <main class="details-page">
+    <section class="details-hero">
+      <div class="container details-hero-inner">
+        <span class="details-eyebrow">Student Stay &amp; Food Finder</span>
+        <h2 class="details-hero-title">Explore Trusted Student-Friendly Options Near Campus</h2>
+        <p class="details-hero-copy">View pricing, distance, contact information, and the exact location in one clean, easy-to-scan space.</p>
+      </div>
+    </section>
+
+    <div class="container">
+      <a href="index.html" class="back-link details-back-link">Back to Listings</a>
+
+      <section class="details-shell">
+        <div class="details-shell-header">
+          <div>
+            <p class="details-shell-label">Listing Details</p>
+            <h3 class="details-shell-title">Property Overview</h3>
+          </div>
+        </div>
+
+        <div id="details" class="details-container">
+          <div class="loader-container">
+            <div class="loader"></div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 StudentFinder | Built for Students</p>
+  </footer>
+
+  <script src="details.js"></script>
+</body>
+</html>

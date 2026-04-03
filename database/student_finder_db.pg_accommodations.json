@@ -1,0 +1,102 @@
+[{
+  "_id": {
+    "$oid": "69ceafb405ad45e6d0c229e1"
+  },
+  "name": "SSA Homes PG",
+  "location": "Opp Kristu Jayanti College",
+  "price": 9000,
+  "contact": "8861563426",
+  "imageUrl": "https://imgs.search.brave.com/J5NkzvxrRpBgVpAr5HpB3X0LoFpsFIGxamQhfaR9dfI/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/c3NhaG9tZXNwZy5j/b20vYXNzZXRzL2lt/Zy9iYW5uZXIvc2xp/ZGVyNC5qcGc",
+  "gmapLink": "https://maps.app.goo.gl/uB5PiqZ76K557Djb6",
+  "description": "Premium PG with WiFi, meals, security",
+  "rating": 4.3,
+  "lat": 13.0162,
+  "lng": 77.649
+},
+{
+  "_id": {
+    "$oid": "69ceafb405ad45e6d0c229e2"
+  },
+  "name": "Livesta Living Spaces",
+  "location": "K Narayanapura",
+  "price": 6500,
+  "contact": "6364621212",
+  "imageUrl": "https://www.livesta.in/assets/img/b1s2.jpg",
+  "gmapLink": "https://maps.google.com/?q=Livesta+PG+Kothanur",
+  "description": "Affordable student hostel with gym & food",
+  "rating": 4.5,
+  "lat": 13.0175,
+  "lng": 77.651
+},
+{
+  "_id": {
+    "$oid": "69ceafb405ad45e6d0c229e3"
+  },
+  "name": "Chrysalis Luxury PG",
+  "location": "Opp Gate 2 KJC",
+  "price": 11000,
+  "contact": "8123608533",
+  "imageUrl": "https://www.chrysalispg.in/_next/image?url=%2Froom2.png&w=1920&q=75",
+  "gmapLink": "https://maps.google.com/?q=Chrysalis+PG+Kothanur",
+  "description": "Luxury PG with AC rooms & security",
+  "rating": 4.4,
+  "lat": 13.0155,
+  "lng": 77.6489
+},
+{
+  "_id": {
+    "$oid": "69ceafb405ad45e6d0c229e4"
+  },
+  "name": "Rich Home PG",
+  "location": "Colonia Santa Maria Layout",
+  "price": 7000,
+  "contact": "9353658895",
+  "imageUrl": "https://source.unsplash.com/400x300/?student-room",
+  "gmapLink": "https://maps.google.com/?q=Rich+Home+PG+Kothanur",
+  "description": "Affordable PG for students",
+  "rating": 4.1,
+  "lat": 13.0182,
+  "lng": 77.6505
+},
+{
+  "_id": {
+    "$oid": "69cf326babd25e8212cff4ef"
+  },
+  "name": "Sri Sai PG",
+  "location": "K Narayanapura",
+  "price": 6000,
+  "contact": "9876543210",
+  "imageUrl": "https://source.unsplash.com/400x300/?pg,room",
+  "gmapLink": "https://maps.google.com/?q=Sri+Sai+PG+Kothanur",
+  "lat": 13.0171,
+  "lng": 77.6502,
+  "rating": 4.1
+},
+{
+  "_id": {
+    "$oid": "69cf326babd25e8212cff4f0"
+  },
+  "name": "Comfort Stay PG",
+  "location": "Near Kristu Jayanti College",
+  "price": 8500,
+  "contact": "9123456780",
+  "imageUrl": "https://source.unsplash.com/400x300/?hostel",
+  "gmapLink": "https://maps.google.com/?q=Comfort+Stay+PG+Kothanur",
+  "lat": 13.016,
+  "lng": 77.6488,
+  "rating": 4.3
+},
+{
+  "_id": {
+    "$oid": "69cf326babd25e8212cff4f1"
+  },
+  "name": "Blue Nest PG",
+  "location": "Hennur Road",
+  "price": 7500,
+  "contact": "9988776655",
+  "imageUrl": "https://source.unsplash.com/400x300/?student-room",
+  "gmapLink": "https://maps.google.com/?q=Blue+Nest+PG+Hennur",
+  "lat": 13.0201,
+  "lng": 77.6475,
+  "rating": 4.2
+}]

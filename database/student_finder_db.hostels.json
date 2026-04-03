@@ -1,0 +1,114 @@
+[{
+  "_id": {
+    "$oid": "69ceafbe05ad45e6d0c229e5"
+  },
+  "name": "Hail Mary Girls Hostel",
+  "location": "K Narayanapura",
+  "contact": "9071639090",
+  "imageUrl": "https://source.unsplash.com/400x300/?girls-hostel",
+  "gmapLink": "https://maps.google.com/?q=Hail+Mary+Hostel+Kothanur",
+  "description": "College affiliated girls hostel",
+  "rating": 4.2,
+  "lat": 13.0165,
+  "lng": 77.648,
+  "price": 7500,
+  "updatedAt": {
+    "$date": "2026-04-03T03:36:34.023Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69ceafbe05ad45e6d0c229e6"
+  },
+  "name": "Holy Cross Hostel",
+  "location": "Gubbi Cross",
+  "contact": "N/A",
+  "imageUrl": "https://source.unsplash.com/400x300/?hostel-building",
+  "gmapLink": "https://maps.google.com/?q=Holy+Cross+Hostel+Bangalore",
+  "description": "Religious managed hostel",
+  "rating": 4,
+  "lat": 13.02,
+  "lng": 77.645,
+  "price": 6000,
+  "updatedAt": {
+    "$date": "2026-04-03T03:36:50.224Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69cf327dabd25e8212cff4f2"
+  },
+  "name": "St Joseph Hostel",
+  "location": "Kothanur",
+  "contact": "N/A",
+  "imageUrl": "https://source.unsplash.com/400x300/?hostel-building",
+  "gmapLink": "https://maps.google.com/?q=St+Joseph+Hostel+Kothanur",
+  "lat": 13.0185,
+  "lng": 77.6499,
+  "rating": 4,
+  "description": "undefined",
+  "price": 6000,
+  "updatedAt": {
+    "$date": "2026-04-03T03:37:04.766Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69cf327dabd25e8212cff4f3"
+  },
+  "name": "Grace Girls Hostel",
+  "location": "Near KJC",
+  "contact": "N/A",
+  "imageUrl": "https://source.unsplash.com/400x300/?girls-hostel",
+  "gmapLink": "https://maps.google.com/?q=Girls+Hostel+Kothanur",
+  "lat": 13.0159,
+  "lng": 77.6485,
+  "rating": 4.3,
+  "description": "undefined",
+  "price": 8000,
+  "updatedAt": {
+    "$date": "2026-04-03T03:37:23.489Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69cf3639d49ef76e230babb9"
+  },
+  "name": "Sunrise Boys Hostel",
+  "location": "K Narayanapura",
+  "price": 6500,
+  "contact": "9876543210",
+  "imageUrl": "https://source.unsplash.com/400x300/?hostel",
+  "gmapLink": "https://maps.google.com/?q=Hostel+Kothanur",
+  "lat": 13.0178,
+  "lng": 77.6505,
+  "rating": 4.1
+},
+{
+  "_id": {
+    "$oid": "69cf3639d49ef76e230babba"
+  },
+  "name": "Green Stay Hostel",
+  "location": "Near Hennur Road",
+  "price": 9000,
+  "contact": "9123456780",
+  "imageUrl": "https://source.unsplash.com/400x300/?hostel-room",
+  "gmapLink": "https://maps.google.com/?q=Hostel+Hennur",
+  "lat": 13.021,
+  "lng": 77.647,
+  "rating": 4.3
+},
+{
+  "_id": {
+    "$oid": "69cf3639d49ef76e230babbb"
+  },
+  "name": "Elite Student Hostel",
+  "location": "Opp KJC",
+  "price": 10000,
+  "contact": "9988776655",
+  "imageUrl": "https://source.unsplash.com/400x300/?modern-hostel",
+  "gmapLink": "https://maps.google.com/?q=Hostel+Near+KJC",
+  "lat": 13.0157,
+  "lng": 77.6488,
+  "rating": 4.5
+}]

@@ -1,0 +1,67 @@
+[{
+  "_id": {
+    "$oid": "69ceafd405ad45e6d0c229e8"
+  },
+  "name": "Sammy's Mess",
+  "location": "Near Chrysalis PG",
+  "price": 80,
+  "imageUrl": "https://source.unsplash.com/400x300/?south-indian-food",
+  "gmapLink": "https://maps.google.com/?q=Sammys+Mess+Kothanur",
+  "description": "Homestyle student meals",
+  "rating": 4.2,
+  "lat": 13.0168,
+  "lng": 77.6495
+},
+{
+  "_id": {
+    "$oid": "69ceafd405ad45e6d0c229e9"
+  },
+  "name": "Local Student Mess",
+  "location": "Kothanur Main Road",
+  "price": 70,
+  "imageUrl": "https://source.unsplash.com/400x300/?mess-food",
+  "gmapLink": "https://maps.google.com/?q=Mess+near+Kothanur",
+  "description": "Budget mess for daily meals",
+  "rating": 4,
+  "lat": 13.0172,
+  "lng": 77.6502
+},
+{
+  "_id": {
+    "$oid": "69cf32ababd25e8212cff4f8"
+  },
+  "name": "Annapurna Mess",
+  "location": "Kothanur",
+  "price": 70,
+  "imageUrl": "https://source.unsplash.com/400x300/?indian-food",
+  "gmapLink": "https://maps.google.com/?q=Annapurna+Mess",
+  "lat": 13.0173,
+  "lng": 77.649,
+  "rating": 4.3
+},
+{
+  "_id": {
+    "$oid": "69cf32ababd25e8212cff4f9"
+  },
+  "name": "Sri Lakshmi Mess",
+  "location": "Near College Road",
+  "price": 80,
+  "imageUrl": "https://source.unsplash.com/400x300/?south-indian-food",
+  "gmapLink": "https://maps.google.com/?q=Lakshmi+Mess",
+  "lat": 13.0165,
+  "lng": 77.6487,
+  "rating": 4.1
+},
+{
+  "_id": {
+    "$oid": "69cf32ababd25e8212cff4fa"
+  },
+  "name": "Student Choice Mess",
+  "location": "K Narayanapura",
+  "price": 75,
+  "imageUrl": "https://source.unsplash.com/400x300/?meal",
+  "gmapLink": "https://maps.google.com/?q=Student+Mess+Kothanur",
+  "lat": 13.0182,
+  "lng": 77.6504,
+  "rating": 4
+}]

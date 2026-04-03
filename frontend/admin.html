@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Stay & Food Finder | Admin Panel</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎓</text></svg>">
+  <meta name="description"
+    content="Manage listings — add, edit, and remove PGs, Hostels, Apartments, Messes, and Restaurants.">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="admin-body">
+
+  <!-- ── NAVBAR ──────────────────────────────────────────── -->
+  <header class="navbar">
+    <div class="logo-wrapper">
+      <h1 onclick="window.location.href='index.html'">Student Utility Finder</h1>
+    </div>
+    <nav class="nav-links">
+      <a href="index.html">Explore</a>
+      <a href="admin.html" class="admin-btn active">Admin Panel</a>
+      <button onclick="logout()" class="logout-btn" style="display:none;">Logout</button>
+    </nav>
+  </header>
+
+  <main>
+    <div class="admin-container">
+
+      <div class="admin-dashboard-header">
+        <h2>Admin Dashboard</h2>
+        <p>Control center for all platform listings. Manage property details and offerings.</p>
+      </div>
+
+      <!-- 🧩 Section 1: Add New Place (Form) -->
+      <div class="admin-section-wrapper">
+        <div class="admin-card form-card">
+          <h3 id="formTitle" class="admin-section-title">Add New Listing</h3>
+
+          <div id="alertMsg" class="msg-alert"></div>
+
+          <form id="placeForm" class="modern-form">
+            <input type="hidden" id="placeId">
+
+            <div class="form-row">
+              <div class="form-group flex-1">
+                <label for="name">Listing Name</label>
+                <input type="text" id="name" class="form-input" placeholder="e.g. Sunrise Hostel" required>
+              </div>
+
+              <div class="form-group flex-1">
+                <label for="category">Category</label>
+                <div class="select-wrapper" style="position: relative;">
+                  <input type="text" id="category" class="form-input" placeholder="Select or type category…" required autocomplete="off" onclick="toggleCategoryDropdown(true)" onfocus="toggleCategoryDropdown(true)" oninput="filterCategoryDropdown()" style="padding-right: 35px;">
+                  <span class="dropdown-arrow-icon" style="position:absolute; right:15px; top:50%; transform:translateY(-50%); font-size: 0.7rem; pointer-events:none; color:var(--text-muted);">▼</span>
+                  <div class="dropdown-options" id="categoryOptions" style="max-height: 200px; overflow-y: auto;">
+                    <div class="dropdown-option" onclick="selectCategory('pg')">PG</div>
+                    <div class="dropdown-option" onclick="selectCategory('hostel')">Hostel</div>
+                    <div class="dropdown-option" onclick="selectCategory('apartment')">Apartment</div>
+                    <div class="dropdown-option" onclick="selectCategory('mess')">Mess</div>
+                    <div class="dropdown-option" onclick="selectCategory('restaurant')">Restaurant</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group flex-2">
+                <label for="location">Location / Address</label>
+                <input type="text" id="location" class="form-input" placeholder="e.g. Near North Campus" required>
+              </div>
+
+              <div class="form-group flex-1">
+                <label for="price">Price (per month / meal)</label>
+                <input type="number" id="price" class="form-input" placeholder="e.g. 5000" min="0" required>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group flex-1">
+                <label for="contact">Contact Number</label>
+                <input type="tel" id="contact" class="form-input" placeholder="e.g. +91 9876543210" required>
+              </div>
+              <div class="form-group flex-1">
+                <label for="rating">Rating (0.0 – 5.0)</label>
+                <input type="number" id="rating" class="form-input" placeholder="e.g. 4.5" min="0" max="5" step="0.1"
+                  required>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group flex-1">
+                <label for="imageUrl">Image URL</label>
+                <input type="url" id="imageUrl" class="form-input" placeholder="https://example.com/image.jpg" required>
+              </div>
+
+              <div class="form-group flex-1">
+                <label for="gmapLink">Google Maps Link</label>
+                <input type="url" id="gmapLink" class="form-input" placeholder="https://maps.google.com/…" required>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="description">Full Description</label>
+              <textarea id="description" class="form-input"
+                placeholder="Provide details about amenities, rules, timings, etc." required></textarea>
+            </div>
+
+            <div class="form-actions">
+              <button type="submit" class="btn-submit" id="submitBtn">Save Listing</button>
+              <button type="button" class="btn-cancel" id="cancel-edit-btn" style="display:none;">Cancel Edit</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!-- 🧩 Section 2: Manage Listings -->
+      <div class="admin-section-wrapper manage-section">
+        <div class="admin-section-header">
+          <h3 class="admin-section-title">Manage Listings</h3>
+          <div class="admin-search">
+            <input type="text" id="adminSearchInput" class="form-input" placeholder="Search saved listings..."
+              oninput="filterAdminGrid()">
+          </div>
+        </div>
+
+        <div class="admin-category-tabs">
+          <button class="admin-tab active" onclick="filterAdminGrid('all', this)">All Places</button>
+          <button class="admin-tab" onclick="filterAdminGrid('pg', this)">PG</button>
+          <button class="admin-tab" onclick="filterAdminGrid('hostels', this)">Hostels</button>
+          <button class="admin-tab" onclick="filterAdminGrid('apartments', this)">Apartments</button>
+          <button class="admin-tab" onclick="filterAdminGrid('messes', this)">Messes</button>
+          <button class="admin-tab" onclick="filterAdminGrid('restaurants', this)">Restaurants</button>
+        </div>
+
+        <div id="adminPlacesGrid" class="places-grid admin-grid">
+          <div class="loader-container">
+            <div class="loader"></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 Student Utility Finder | Built for Students</p>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    // Frontend-only DOM filter handler (keeps script.js untouched)
+    let currentAdminFilter = 'all';
+
+    function filterAdminGrid(catVal, btnElement) {
+      if (catVal !== undefined) {
+        currentAdminFilter = catVal;
+      }
+
+      if (btnElement) {
+        document.querySelectorAll('.admin-tab').forEach(b => b.classList.remove('active'));
+        btnElement.classList.add('active');
+      }
+
+      const searchTerm = document.getElementById('adminSearchInput').value.toLowerCase();
+      const cards = document.querySelectorAll('#adminPlacesGrid .place-card');
+      let visibleCount = 0;
+
+      cards.forEach(card => {
+        const titleBadgeText = card.innerText.toLowerCase();
+        let catMatch = false;
+
+        const badge = card.querySelector('.category-badge');
+        if (currentAdminFilter === 'all') {
+          catMatch = true;
+        } else if (badge) {
+          // Normalize names
+          const badgeText = badge.innerText.toLowerCase();
+          const filterNormalized = currentAdminFilter.replace('s', '');
+          const badgeNormalized = badgeText.replace('s', '');
+          if (badgeText.includes(currentAdminFilter) || badgeNormalized.includes(filterNormalized)) {
+            catMatch = true;
+          }
+        }
+
+        const searchMatch = titleBadgeText.includes(searchTerm);
+
+        if (catMatch && searchMatch) {
+          card.style.display = 'flex';
+          visibleCount++;
+        } else {
+          card.style.display = 'none';
+        }
+      });
+
+      const emptyState = document.getElementById('adminEmptyState');
+      if (visibleCount === 0 && cards.length > 0) {
+        if (!emptyState) {
+          const msg = document.createElement('p');
+          msg.id = 'adminEmptyState';
+          msg.className = 'admin-empty-msg';
+          msg.innerText = 'No listings match your filters.';
+          document.getElementById('adminPlacesGrid').appendChild(msg);
+        } else {
+          emptyState.style.display = 'block';
+        }
+      } else if (emptyState) {
+        emptyState.style.display = 'none';
+      }
+    }
+
+    // Bind DOM observer to run filter automatically when script.js renders the grid
+    const observer = new MutationObserver(() => {
+      filterAdminGrid(currentAdminFilter);
+    });
+    observer.observe(document.getElementById('adminPlacesGrid'), { childList: true });
+  </script>
+</body>
+
+</html>

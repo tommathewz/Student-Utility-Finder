@@ -1,0 +1,66 @@
+[{
+  "_id": {
+    "$oid": "69ceafc705ad45e6d0c229e7"
+  },
+  "name": "Colonia Santa Maria Apartments",
+  "location": "Near KJC",
+  "price": 12000,
+  "imageUrl": "https://source.unsplash.com/400x300/?apartment",
+  "gmapLink": "https://maps.google.com/?q=Colonia+Santa+Maria+Kothanur",
+  "description": "Shared apartments for students",
+  "rating": 4.1,
+  "lat": 13.018,
+  "lng": 77.65
+},
+{
+  "_id": {
+    "$oid": "69cf3291abd25e8212cff4f4"
+  },
+  "name": "Green Residency Apartments",
+  "location": "Hennur",
+  "price": 15000,
+  "imageUrl": "https://source.unsplash.com/400x300/?apartment",
+  "gmapLink": "https://maps.google.com/?q=Green+Residency+Hennur",
+  "lat": 13.0212,
+  "lng": 77.6469,
+  "rating": 4.4
+},
+{
+  "_id": {
+    "$oid": "69cf3291abd25e8212cff4f5"
+  },
+  "name": "Urban Nest Apartments",
+  "location": "K Narayanapura",
+  "price": 12000,
+  "imageUrl": "https://source.unsplash.com/400x300/?flat",
+  "gmapLink": "https://maps.google.com/?q=Urban+Nest+Apartments",
+  "lat": 13.018,
+  "lng": 77.6501,
+  "rating": 4.2
+},
+{
+  "_id": {
+    "$oid": "69cf32a0abd25e8212cff4f6"
+  },
+  "name": "Green Residency Apartments",
+  "location": "Hennur",
+  "price": 15000,
+  "imageUrl": "https://source.unsplash.com/400x300/?apartment",
+  "gmapLink": "https://maps.google.com/?q=Green+Residency+Hennur",
+  "lat": 13.0212,
+  "lng": 77.6469,
+  "rating": 4.4
+},
+{
+  "_id": {
+    "$oid": "69cf32a0abd25e8212cff4f7"
+  },
+  "name": "Urban Nest Apartments",
+  "location": "K Narayanapura",
+  "price": 12000,
+  "imageUrl": "https://source.unsplash.com/400x300/?flat",
+  "gmapLink": "https://maps.google.com/?q=Urban+Nest+Apartments",
+  "lat": 13.018,
+  "lng": 77.6501,
+  "rating": 4.2
+}]
